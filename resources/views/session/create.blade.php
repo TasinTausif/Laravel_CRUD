@@ -5,7 +5,7 @@
         <x-formData name="password" type="password" />
 
         <div class="mb-6 bg-gray-500 text-white rounded-xl py-2 px-4 hover:bg-gray-300">
-            <button type="submit" class="bg-gray-500">
+            <button type="submit" class="bg-gray-500 hover:bg-gray-300 w-full">
                 Login
             </button>
         </div>

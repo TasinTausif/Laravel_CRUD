@@ -72,7 +72,7 @@
                                 @auth
                                     <td
                                         class="text-sm font-medium leading-5 text-center whitespace-no-wrap border-b border-gray-200 ">
-                                        <a href="/blogs/{{ $blog->id }}/edit"
+                                        <a href="{{ route('edit', ['blog' => $blog->id]) }}"
                                             class="text-indigo-600 hover:text-indigo-900">
                                             <x-icon name="edit" />
                                         </a>
