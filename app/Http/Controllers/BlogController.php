@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use Illuminate\Support\Facades\Auth;
 
 class BlogController extends Controller {
 
@@ -13,6 +14,11 @@ class BlogController extends Controller {
 	}
 
 	public function create() {
+
+		// if ( !auth()->check() ) {
+		// 	return redirect( '/' )->with( 'failed', 'You must Log in First!' );
+		// }
+
 		return view( 'blog.create' );
 	}
 
@@ -51,4 +57,5 @@ class BlogController extends Controller {
 
 		return redirect( '/' );
 	}
+
 }

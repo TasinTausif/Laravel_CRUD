@@ -7,9 +7,6 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
 
 class SessionController extends Controller {
-	public function create() {
-		return view( 'session.create' );
-	}
 
 	public function store( Request $request ) {
 

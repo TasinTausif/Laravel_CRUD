@@ -5,11 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 
 class RegistrationController extends Controller {
-	public function create() {
-		return view( 'registration.create' );
-	}
-
-	public function store() {
+	public function __invoke() {
 		$attributes = request()->validate( [
 			'name'     => 'required',
 			'email'    => 'required|email',

@@ -95,4 +95,12 @@
             </div>
         </div>
     </div>
+
+    {{-- @if (\Session::has('failed'))
+        <div class="alert alert-success">
+            <ul>
+                <li>{!! \Session::get('failed') !!}</li>
+            </ul>
+        </div>
+    @endif --}}
 </x-layout>
