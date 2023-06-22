@@ -6,10 +6,6 @@
     </label>
 
     <input class="border border-gray-400 p-2 w-full rounded" type={{ $type }} name={{ $name }}
-        id={{ $name }} {{ $attributes(['value' => old($name)]) }} required>
-
-    @error($name)
-        <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
-    @enderror
+        id={{ $name }} {{ $attributes(['value' => old($name)]) }}>
 
 </div>
