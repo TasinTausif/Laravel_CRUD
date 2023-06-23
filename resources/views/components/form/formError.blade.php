@@ -1,4 +1,4 @@
-<div class="text-red-500 text-xs mt-2 text-center">
+<div class="text-red-500 text-xs mt-2 text-center bg-gray-300">
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul class="list-style-type: circle">
