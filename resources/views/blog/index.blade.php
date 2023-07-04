@@ -34,11 +34,11 @@
                             <x-table.head name="description" />
                             <x-table.head name="author" />
                             <x-table.head name="created" />
-                            @auth
+                            @can('admin')
                                 <th class="px-6 py-3 text-sm text-left text-gray-500 border-b border-gray-200 bg-gray-50"
                                     colspan="3">
                                     ACTION</th>
-                            @endauth
+                            @endcan
                         </tr>
                     </thead>
 
@@ -69,7 +69,7 @@
                                     <span>{{ $blog->created_at->diffForHumans() }}</span>
                                 </x-table.data>
 
-                                @auth
+                                @can('admin')
                                     <td
                                         class="text-sm font-medium leading-5 text-center whitespace-no-wrap border-b border-gray-200 ">
                                         <a href="{{ route('edit', ['blog' => $blog->id]) }}"
@@ -87,7 +87,7 @@
                                             </button>
                                         </form>
                                     </td>
-                                @endauth
+                                @endcan
                             </tr>
                         @endforeach
                     </tbody>
