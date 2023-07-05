@@ -9,7 +9,7 @@ Route::get( '/', [BlogController::class, 'index'] );
 Route::middleware( 'auth' )->group( function () {
 	Route::get( '/blogs/create', [BlogController::class, 'create'] );
 	Route::post( '/blogs/store', [BlogController::class, 'store'] );
-	Route::get( md5( '/blogs/{blog:id}/edit' ), [BlogController::class, 'edit'] )->name( 'edit' );
+	Route::get( '/blogs/{blog:id}/edit', [BlogController::class, 'edit'] )->name( 'edit' );
 	Route::patch( '/blogs/{blog:id}', [BlogController::class, 'update'] );
 	Route::delete( '/blogs/{blog:id}', [BlogController::class, 'destroy'] );
 } );
